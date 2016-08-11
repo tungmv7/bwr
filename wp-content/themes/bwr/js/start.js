@@ -10,6 +10,13 @@ $(window).resize(function() {
     }
 });
 $(document).ready(function ($) {
+
+    $('.ui.sticky')
+          .sticky({
+            context: '.fck'
+          })
+        ;
+
     $('.counter').counterUp({
          delay: 10,
         time: 1500
@@ -36,7 +43,7 @@ $(document).ready(function ($) {
         $(".header").css("min-height", $(window).height() - $(".top-header").height() - $("#mainNav").height() );
     }
 	
-    $('<div id="loading"><img src="images/loading.gif" /></div>').appendTo('body');
+    $('<div id="loading"><img src="/loading.gif" /></div>').appendTo('body');
     if($(window).width() > 768  ) {
         if ($(".frm-search-top").length > 0) {
             $(".btn-search").click(function () {
