@@ -13,17 +13,19 @@
     <script src="../js/html5shiv.js" type="text/javascript"></script>
     <script src="../js/respond.min.js" type="text/javascript"></script>
     <![endif]-->
+    <?= wp_head() ?>
+    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/style.css" media="screen"/>
 </head>
 <body <?php body_class() ?>>
 
 <div class="top-header">
     <div class="container">
-        <span><i>Opening Hours :</i> Monday to Saturday - 8am to 5pm</span>
+
+        <span><a href="#footer" class="page-scroll" style="color: #ac814c;"><i>Opening Hours</i></a> - Today: <?= get_option('bwr_settings_opening_hours')[strtolower(date("D"))] ?></span>
         <ul class="list-social-1">
-            <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href="<?= get_option('bwr_settings_general')['facebook'] ?>" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="<?= get_option('bwr_settings_general')['Twitter'] ?>" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="<?= get_option('bwr_settings_general')['Instagram'] ?>" title="Instagram"><i class="fa fa-instagram"></i></a></li>
         </ul>
     </div>
 </div>
@@ -35,7 +37,7 @@
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#"><img
+            <a class="navbar-brand page-scroll" href="/"><img
                     src="<?= get_template_directory_uri() ?>/images/logo-1.png" alt=""> <img
                     src="<?= get_template_directory_uri() ?>/images/logo-mobile.png" alt=""></a>
         </div>

@@ -10,3 +10,38 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  BWR
 */
+body.admin-bar #mainNav {
+    top: 82px;
+}
+body.admin-bar .navbar-default.affix {
+    top: 32px !important;
+}
+.wpcf7-not-valid-tip, span.wpcf7-not-valid-tip {
+    font-size: 80%;
+    line-height: 2em;
+    color: #ac814c;
+}
+div.wpcf7 img.ajax-loader {
+    width: 16px;
+    height: 16px;
+}
+
+.frm-2 p.text-left {
+    float: left;
+}
+.frm-2 div.wpcf7-response-output, .frm-1 div.wpcf7-response-output {
+    margin: 0;
+    padding: 0 9px;
+    border: none !important;
+    line-height: 44px;
+    float: left;
+    font-size: 80%;
+    color: #ac814c;
+}
+.frm-1 div.wpcf7-response-output {
+    text-align: center;
+    float: none;
+}
+form textarea.form-control {
+    height: auto;
+}

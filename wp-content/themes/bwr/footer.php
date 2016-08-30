@@ -1,41 +1,52 @@
-<footer class="footer">
+
+<section class="newsletter-section bg-parallax bg-parallax-1">
+    <div class="ctn-app container">
+        <div class="col-sm-8">
+            <h2>Newsletter</h2>
+            <p>Feel free to place your Mail_ID and Subscribe to our Newsletter here. So that, you can receive our
+                exiting Updates and Offers with no wait!</p>
+        </div>
+        <div class="col-sm-4">
+            <form class="frm-mail">
+                <input class="txt-mail" type="email" name="" placeholder="Email Address">
+                <button class="btn-mail"><i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer">
     <div class="top-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <h4><a href="#" title="">About Us</a></h4>
-                    <p>Consectetue adipiscing elit, qui sed diam nonummy nibh et euismod tin cidunt ut laoreet dolore magna me lius quod ii legunt saepius. </p>
-                    <p>Aliquam erat volutpat. Ut wisi enim ad minim veniam est usus. Legentis in iis qui facit eorum claritatem.  </p>
+                    <h4><a href="#" title="">Social media</a></h4>
+                    <p>Like, follow and share our social media pages.
+                        Tag yourselves and share your pics with us!</p>
                     <ul class="list-social">
-                        <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" title=""><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="<?= get_option('bwr_settings_general')['facebook'] ?>" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="<?= get_option('bwr_settings_general')['Twitter'] ?>" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="<?= get_option('bwr_settings_general')['Instagram'] ?>" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h4><a href="#" title="">Open Hour</a></h4>
-                    <p><span>Mon - Tue: </span>09:30 am - 21:00 pm</p>
-                    <p><span>Wednesday: </span>09:00 am - 21:30 pm</p>
-                    <p><span>Thursday: </span>08:30 am - 22:00 pm</p>
-                    <p><span>Fri - Sat: </span>08:30 am - 23:30 pm</p>
-                    <p><span>Sunday: </span>08:00 am - 24:00 pm</p>
+
+                    <?php $openingHours = get_option('bwr_settings_opening_hours') ?>
+                    <h4><a href="javascript:;" title="">Opening Hours</a></h4>
+                    <p><span>Monday: </span><?= $openingHours['mon']?></p>
+                    <p><span>Tuesday: </span><?= $openingHours['tue']?></p>
+                    <p><span>Wednesday: </span><?= $openingHours['wed']?></p>
+                    <p><span>Thursday: </span><?= $openingHours['thu']?></p>
+                    <p><span>Friday: </span><?= $openingHours['fri']?></p>
+                    <p><span>Saturday: </span><?= $openingHours['sat']?></p>
+                    <p><span>Sunday: </span><?= $openingHours['sun']?></p>
                     <p><span>Holiday: </span> If have request</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h4><a href="#" title="">Flickr Widget</a></h4>
-                    <ul class="list-flickr row">
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                        <li class="col-xs-4"><a href="#" title=""><img src="<?= get_template_directory_uri() ?>/images/per-1.png"></a></li>
-                    </ul>
+                    <h4><a href="#" title="">Our feed</a></h4>
+                    <div style="margin-top: -10px; margin-left: -5px; margin-right: -5px;">
+                    <?= do_shortcode("[instagram-feed num=9 cols=3]") ?>
+                    </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h4><a href="#" title="">quick links</a></h4>
@@ -51,7 +62,7 @@
     </div>
     <div class="footer-bottom">
         <div class=container"">
-            <p class="copyright"> <a href="#" title="HairStyle">HairStyle</a> © 2016. All Right Reserved. Designed by <a href="#" title="HairStyle">HiTheme</a></p>
+            <p class="copyright"> <a href="/" title="HairStyle">Bright White Room</a> © 2016. All Right Reserved.</p>
         </div>
     </div>
 </footer>
@@ -60,5 +71,6 @@
 <script type="text/javascript" src="<?= get_template_directory_uri() ?>/js/lib.js"></script>
 <script type="text/javascript" src="<?= get_template_directory_uri() ?>/js/plugin.js"></script>
 <script type="text/javascript" src="<?= get_template_directory_uri() ?>/js/start.js"></script>
+<?= wp_footer() ?>
 </body>
 </html>

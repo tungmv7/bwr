@@ -372,7 +372,7 @@ hr.second { max-width: 100px; border-width: 2px; border-color: #c99d66; margin-b
 form .form-group { margin-bottom: 12px;}
 form .form-control { height: 45px; border: 1px solid #e9eced; box-shadow: none; border-radius: 0;}
 form .row { margin-left: -6px; margin-right: -6px;}
-form .row .col-sm-6 { padding-left: 6px; padding-right: 6px;}
+/*form .row .col-sm-6 { padding-left: 6px; padding-right: 6px;}*/
 form p { margin-bottom: 0; }
 .frm-1 p {padding-top: 25px;}
 .frm-2 textarea { height: 160px; resize: none;}
@@ -440,6 +440,9 @@ form p { margin-bottom: 0; }
 .block-choose , .block-appoi{ position: relative;}
 .block-choose .img-1 {position: absolute;bottom: 0;left: 50%;width: 410px;margin-left: -205px;}
 .block-appoi .img-2 {width: 280px;position: absolute;bottom: 0;left: 50%;margin-left: -675px;}
+.services-section {position: relative;}
+.services-section .img-1 {width: 280px;position: absolute;bottom: 0;left: 50%;margin-left: -675px;}
+.services-section .img-2 {width: 280px;position: absolute;bottom: 0;right: 50%;margin-right: -675px;}
 
 /*btn-top*/
 .btn-top {
