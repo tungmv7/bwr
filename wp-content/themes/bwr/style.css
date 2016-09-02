@@ -45,3 +45,9 @@ div.wpcf7 img.ajax-loader {
 form textarea.form-control {
     height: auto;
 }
+.nav-footer li {
+    margin-bottom: 20px;
+}
+.nav-footer li > a {
+    color: #777;
+}

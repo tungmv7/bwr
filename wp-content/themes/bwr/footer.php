@@ -40,7 +40,6 @@
                     <p><span>Friday: </span><?= $openingHours['fri']?></p>
                     <p><span>Saturday: </span><?= $openingHours['sat']?></p>
                     <p><span>Sunday: </span><?= $openingHours['sun']?></p>
-                    <p><span>Holiday: </span> If have request</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h4><a href="#" title="">Our feed</a></h4>
@@ -48,14 +47,10 @@
                     <?= do_shortcode("[instagram-feed num=9 cols=3]") ?>
                     </div>
                 </div>
+
                 <div class="col-md-3 col-sm-6">
-                    <h4><a href="#" title="">quick links</a></h4>
-                    <p><a href="#" title="">Our Services</a></p>
-                    <p><a href="#" title="">FAQ</a></p>
-                    <p><a href="#" title="">Support</a></p>
-                    <p><a href="#" title="">Contact Us</a></p>
-                    <p><a href="#" title="">Our Packages</a></p>
-                    <p><a href="#" title="">Latest News</a></p>
+                    <h4><a href="javascript:;" title="">quick links</a></h4>
+                    <?= wp_nav_menu(['menu_class' => 'nav-footer nav-scroll']); ?>
                 </div>
             </div>
         </div>
